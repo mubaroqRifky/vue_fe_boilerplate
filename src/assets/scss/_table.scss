@@ -1,0 +1,33 @@
+.vue3-easy-data-table.main-table {
+    --easy-table-header-item-padding: 10px 15px;
+    --easy-table-body-row-height: 50px;
+    --easy-table-body-item-padding: 10px 15px;
+
+    --easy-table-rows-per-page-selector-width: 70px;
+    --easy-table-rows-per-page-selector-option-padding: 10px;
+    --easy-table-rows-per-page-selector-z-index: 1;
+
+    @apply rounded-t-lg shadow-lg;
+
+    table {
+        thead {
+            th {
+                @apply bg-primary px-4 py-4 text-white font-semibold;
+
+                &:first-child {
+                    @apply rounded-tl-lg;
+                }
+                &:last-child {
+                    @apply rounded-tr-lg;
+                }
+            }
+        }
+    }
+
+    &.fixed {
+        .fixed-header {
+            max-height: 60vh;
+            overflow: auto;
+        }
+    }
+}

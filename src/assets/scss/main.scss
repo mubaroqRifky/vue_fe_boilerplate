@@ -1,0 +1,32 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "variables";
+@import "reset";
+@import "utils";
+@import "animation";
+@import "scrollbar";
+@import "table";
+
+@import "button";
+#app {
+    @apply flex h-screen w-screen overflow-hidden width-constraint;
+}
+
+.mobile-width-constraint {
+    @apply max-w-md w-full mx-auto my-0;
+}
+
+.width-constraint {
+    @apply max-w-[150rem] w-full mx-auto my-0;
+}
+
+.bg-blur {
+    background: linear-gradient(
+        147deg,
+        rgba(108, 108, 108, 0.2) 0%,
+        rgba(108, 108, 108, 0.2) 100%
+    );
+    backdrop-filter: blur(2px);
+}
