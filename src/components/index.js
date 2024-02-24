@@ -1,5 +1,6 @@
 import Vue3EasyDataTable from "vue3-easy-data-table";
 import vSelect from "vue-select";
+import { Icon } from "@iconify/vue";
 
 import ModalMain from "@/components/modal/ModalMain.vue";
 import TableControl from "@/components/table/TableControl.vue";
@@ -21,6 +22,7 @@ const components = {
     BasicCheckbox,
     CustomSelectSearch,
 
+    Icon,
     IconEdit,
     IconShow,
     IconDelete,

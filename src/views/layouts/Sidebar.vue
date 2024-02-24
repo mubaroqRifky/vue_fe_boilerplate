@@ -25,7 +25,7 @@
                     Starter Code
                 </h1>
                 <p class="text-sm leading-3 whitespace-nowrap">
-                    Get Ready to Code
+                    Frontend Boilerplate
                 </p>
             </article>
         </div>
@@ -37,11 +37,7 @@
                 <template v-if="item.child">
                     <div
                         class="parent-container"
-                        :class="
-                            item.show || route.name.match(item.name)
-                                ? 'bg-primaryLight'
-                                : ''
-                        "
+                        :class="isMenuActive(item) ? 'bg-primaryLight' : ''"
                     >
                         <li
                             class="list-menu menu-parent justify-between"
@@ -67,31 +63,19 @@
                             <IconArrow
                                 v-if="open"
                                 class="transition-transform"
-                                :class="
-                                    item.show || route.name.match(item.name)
-                                        ? 'rotate-90'
-                                        : ''
-                                "
+                                :class="isMenuActive(item) ? 'rotate-90' : ''"
                                 width="15px"
                                 height="15px"
                             />
                         </li>
                         <div
-                            style="
-                                transition: all 0.15s
-                                    cubic-bezier(0.4, 0, 0.2, 1);
-                            "
                             :style="
-                                item.show || route.name.match(item.name)
+                                isMenuActive(item)
                                     ? '--height: 100%'
                                     : '--height: 0px'
                             "
-                            class="child-container"
-                            :class="
-                                item.show || route.name.match(item.name)
-                                    ? 'mt-2'
-                                    : 'mt-0'
-                            "
+                            class="child-container transition-all"
+                            :class="isMenuActive(item) ? 'mt-2' : 'mt-0'"
                         >
                             <ul
                                 class="flex-1 flex flex-col gap-2 overflow-hidden h-full"
@@ -109,10 +93,9 @@
                                     <router-link
                                         :to="{ path: child.link }"
                                         :class="[
-                                            open ? '' : 'justify-center',
-                                            route.name.match(child.name)
-                                                ? 'router-link-active'
-                                                : '',
+                                            !open && 'justify-center',
+                                            isMenuActive(child) &&
+                                                'router-link-active',
                                         ]"
                                     >
                                         <component
@@ -153,7 +136,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref, onMounted, onUnmounted, computed } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useRoute } from "vue-router";
 import IconMain from "@/components/icons/page/IconMain.vue";
 import IconArrow from "@/components/icons/page/IconArrow.vue";
@@ -221,6 +204,10 @@ const resizeHandler = (evt) => {
     setViewMobile(evt.target);
 };
 
+const isMenuActive = (item) => {
+    return item.show || route.name.match(item.name);
+};
+
 onMounted(() => {
     window.addEventListener("resize", resizeHandler);
     setViewMobile(window);
@@ -272,7 +259,7 @@ onUnmounted(() => {
         @apply justify-center;
 
         > a {
-            @apply px-4 py-2.5;
+            @apply px-3.5 py-2.5;
         }
     }
 
