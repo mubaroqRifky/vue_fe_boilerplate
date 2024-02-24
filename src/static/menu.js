@@ -1,6 +1,6 @@
 import { shallowRef } from "vue";
 
-import IconMenuHome from "@/components/icons/menu/IconMenuHome.vue";
+import IconMenuStarting from "@/components/icons/menu/IconMenuStarting.vue";
 
 import IconMenuMaster from "@/components/icons/menu/IconMenuMaster.vue";
 import IconMenuUser from "@/components/icons/menu/IconMenuUser.vue";
@@ -9,10 +9,10 @@ import IconMenuPermission from "@/components/icons/menu/IconMenuPermission.vue";
 
 export default [
     {
-        text: "Home",
-        link: "/home",
-        icon: shallowRef(IconMenuHome),
-        name: "home",
+        text: "Getting Started",
+        link: "getting-started",
+        icon: shallowRef(IconMenuStarting),
+        name: "docs-getting-started",
     },
     {
         text: "Master",

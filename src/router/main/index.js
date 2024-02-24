@@ -8,7 +8,7 @@ export default [
         path: "/",
         name: "main",
         component: Main,
-        redirect: { name: "home" },
+        redirect: { name: "getting-started" },
         children: [...HomeRoute, ...MasterRoute],
     },
 ];
