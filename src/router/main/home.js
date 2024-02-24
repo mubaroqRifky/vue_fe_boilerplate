@@ -6,7 +6,7 @@ export default [
         name: "getting-started",
         component: HomeIndex,
         meta: {
-            title: "getting-started",
+            title: "Getting Started",
         },
     },
 ];

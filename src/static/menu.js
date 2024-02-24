@@ -10,9 +10,9 @@ import IconMenuPermission from "@/components/icons/menu/IconMenuPermission.vue";
 export default [
     {
         text: "Getting Started",
-        link: "getting-started",
+        link: "/getting-started",
         icon: shallowRef(IconMenuStarting),
-        name: "docs-getting-started",
+        name: "getting-started",
     },
     {
         text: "Master",
