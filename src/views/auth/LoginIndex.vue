@@ -6,7 +6,6 @@
             <div
                 class="max-w-sm text-center grid gap-6 content-center items-center justify-items-center px-4 md:px-8 py-8 rounded-sm"
             >
-                <img :src="logo" class="w-40" alt="Logo CP Petindo" />
                 <div class="flex flex-col gap-1 justify-center items-center">
                     <h1 class="text-xl uppercase font-bold tracking-widest">
                         Welcome Back!
@@ -14,8 +13,8 @@
                     <h2>Login to Continue</h2>
                 </div>
                 <p class="text-xs leading-4">
-                    Mohon login menggunakan email @cpp.co.id yang sudah
-                    terhubung dengan desktop Anda
+                    Mohon login menggunakan email yang sudah terhubung dengan
+                    desktop Anda
                 </p>
 
                 <div class="text-black mt-2 flex justify-center">
@@ -59,22 +58,17 @@
 </template>
 
 <script>
-import logo from "@/assets/images/logoCpp.png";
 import IconGoogle from "@/components/icons/page/IconGoogle.vue";
 import GoogleLogin from "@/components/button/GoogleLogin.vue";
-
 import Authenticate from "@/apis/Authenticate";
-
 import Modal from "@/controllers/state/ModalController";
 import Loading from "@/controllers/state/LoadingController";
 import User from "@/controllers/auth/UserController";
-
 import MoonLoader from "vue-spinner/src/MoonLoader.vue";
 
 export default {
     data() {
         return {
-            logo,
             params: {
                 client_id: import.meta.env.VITE_GOOGLE_OAUTH_CLIENT_ID,
             },
@@ -116,10 +110,6 @@ export default {
         async loginHandler(id_token) {
             try {
                 const { data } = await Authenticate.login(id_token);
-                // setTimeout(() => {
-                //     User.set(id_token);
-                //     this.$router.push({ path: "/" });
-                // }, 1000);
                 User.set(data.token);
                 this.$router.push({ path: "/" });
             } catch (error) {
