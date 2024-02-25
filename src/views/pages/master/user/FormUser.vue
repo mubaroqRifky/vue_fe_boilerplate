@@ -10,8 +10,7 @@
                 placeholder="Name"
                 required
                 :disabled="loading || initialPage.isShow"
-                :error="payload.errors?.name || errors.name"
-                @change="payload.validate('name')"
+                :error="errors.name"
                 v-model:value="payload.name"
             />
             <BasicInput
@@ -20,8 +19,7 @@
                 placeholder="Email"
                 required
                 :disabled="loading || initialPage.isShow"
-                :error="payload.errors?.email || errors.email"
-                @change="payload.validate('email')"
+                :error="errors.email"
                 v-model:value="payload.email"
             />
             <BasicCheckbox
@@ -33,8 +31,7 @@
                 :value-false="0"
                 required
                 :disabled="loading || initialPage.isShow"
-                :error="payload.errors?.is_active || errors.is_active"
-                @change="payload.validate('is_active')"
+                :error="errors.is_active"
                 v-model:value="payload.is_active"
             />
 

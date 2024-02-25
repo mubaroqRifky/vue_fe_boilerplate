@@ -10,8 +10,7 @@
                 placeholder="Name"
                 required
                 :disabled="loading || !initialPage.isCreate"
-                :error="payload.errors?.name || errors.name"
-                @change="payload.validate('name')"
+                :error="errors.name"
                 v-model:value="payload.name"
             />
             <BasicInput
@@ -21,8 +20,7 @@
                 type="textarea"
                 required
                 :disabled="loading || initialPage.isShow"
-                :error="payload.errors?.description || errors.description"
-                @change="payload.validate('description')"
+                :error="errors.description"
                 v-model:value="payload.description"
             />
 
@@ -49,7 +47,7 @@
 </template>
 
 <script setup>
-import { computed, reactive, onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import BasicInput from "@/components/input/BasicInput.vue";
 import PagePermissionController from "@/controllers/page/PagePermissionController";

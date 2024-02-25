@@ -2,7 +2,6 @@ import BasicInitialPage from "./BasicInitialPage";
 import Role from "@/apis/Role";
 import Modal from "@/controllers/state/ModalController";
 import { goToIndex, addItem, editItem, showItem } from "./ImplementMethods";
-import { useForm } from "laravel-precognition-vue";
 
 class PageRoleController extends BasicInitialPage {
     route_index = "master-role";
@@ -25,10 +24,10 @@ class PageRoleController extends BasicInitialPage {
     }
 
     generateForm() {
-        this.form = useForm("post", "/role", {
+        this.form = {
             name: "",
             description: "",
-        });
+        };
     }
 
     async index() {
@@ -71,8 +70,6 @@ class PageRoleController extends BasicInitialPage {
             this.payload.name = data.name;
             this.payload.description = data.description;
             this.payload.permissions = data.permissions;
-
-            this.state_form.payload = useForm("post", "/role", this.payload);
         } catch (error) {
             throw new ErrorHandler(error);
         } finally {

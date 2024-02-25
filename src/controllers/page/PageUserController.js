@@ -3,7 +3,6 @@ import User from "@/apis/User";
 import Modal from "@/controllers/state/ModalController";
 import Loading from "@/controllers/state/LoadingController";
 import { goToIndex, addItem, editItem, showItem } from "./ImplementMethods";
-import { useForm } from "laravel-precognition-vue";
 
 class PageUserController extends BasicInitialPage {
     route_index = "master-user";
@@ -27,10 +26,10 @@ class PageUserController extends BasicInitialPage {
     }
 
     generateForm() {
-        this.form = useForm("post", "/user", {
+        this.form = {
             name: "",
             email: "",
-        });
+        };
     }
 
     async index() {
@@ -90,8 +89,6 @@ class PageUserController extends BasicInitialPage {
 
             this.state_form.data.roles = data.roles;
             this.state_form.data.permissions = data.permissions;
-
-            this.state_form.payload = useForm("post", "/user", this.payload);
         } catch (error) {
             throw new ErrorHandler(error);
         } finally {

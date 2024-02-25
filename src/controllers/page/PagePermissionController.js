@@ -2,7 +2,6 @@ import BasicInitialPage from "./BasicInitialPage";
 import Permission from "@/apis/Permission";
 import Modal from "@/controllers/state/ModalController";
 import { goToIndex, addItem, editItem, showItem } from "./ImplementMethods";
-import { useForm } from "laravel-precognition-vue";
 
 class PagePermissionController extends BasicInitialPage {
     route_index = "master-permission";
@@ -25,10 +24,10 @@ class PagePermissionController extends BasicInitialPage {
     }
 
     generateForm() {
-        this.form = useForm("post", "/permission", {
+        this.form = {
             name: "",
             description: "",
-        });
+        };
     }
 
     async index() {
@@ -70,12 +69,6 @@ class PagePermissionController extends BasicInitialPage {
             this.payload.id = data.id;
             this.payload.name = data.name;
             this.payload.description = data.description;
-
-            this.state_form.payload = useForm(
-                "post",
-                "/permission",
-                this.payload
-            );
         } catch (error) {
             throw new ErrorHandler(error);
         } finally {
