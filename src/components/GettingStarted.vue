@@ -63,8 +63,13 @@
 
                 <li>Setup your environment in .env file</li>
                 <i>
-                    You can get API bolierplate from
-                    https://github.com/tebeiksan/laravel_api_boilerplate
+                    You can get API boilerplate from
+                    <a
+                        href="https://github.com/tebeiksan/laravel_api_boilerplate"
+                        target="_blank"
+                    >
+                        https://github.com/tebeiksan/laravel_api_boilerplate
+                    </a>
                 </i>
                 <Code>
                     VITE_API_URL=[YOUR_API_URL]
@@ -132,7 +137,9 @@
             <h3 class="text-xl font-bold" id="license">License</h3>
             <p>
                 Distributed under the
-                <a href="https://opensource.org/license/MIT">MIT</a>
+                <a href="https://opensource.org/license/MIT" target="_blank"
+                    >MIT</a
+                >
                 License. See LICENSE.txt for more information.
             </p>
             <p>Copyright &copy; 2024, ICT. Mubaroq Rifky</p>

@@ -86,6 +86,7 @@ _Below is an example of how you can instruct your audience on installing and set
     VITE_API_URL=[YOUR_API_URL]
     VITE_GOOGLE_OAUTH_CLIENT_ID=[YOUR_GOOGLE_CLIENT_ID]
     ```
+    You can get API boilerplate from https://github.com/tebeiksan/laravel_api_boilerplate
 5. Compile and Hot-Reload for Development
     ```sh
     npm run dev
