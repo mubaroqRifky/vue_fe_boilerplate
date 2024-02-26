@@ -46,7 +46,7 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
--   npm
+-   npm >= 18 or you can use the latest version
     ```sh
     npm install npm@latest -g
     ```
@@ -71,7 +71,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/your_username_/Project-Name.git
+    git clone https://github.com/mubaroqRifky/vue_fe_boilerplate.git
     ```
 2. Install NPM packages
     ```sh
@@ -168,6 +168,7 @@ Copyright (c) 2024-present, Mubaroq Rifki
 ## Contact
 
 Mubaroq Rifki - mubaroq.rifki92@gmail.com
+Tubagus Iksan - tebeiksan@gmail.com
 
 <!-- ACKNOWLEDGMENTS -->
 

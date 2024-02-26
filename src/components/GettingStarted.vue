@@ -25,7 +25,10 @@
 
             <ul class="list-disc pl-4">
                 <li>Node.js</li>
-                <i> You can use the latest version of NPM</i>
+                <i>
+                    Minimum version >= 18 or you can use the latest version of
+                    NPM</i
+                >
                 <Code>
                     <em>$</em>&nbsp;
                     <b> npm install npm@latest -g </b>
@@ -45,7 +48,7 @@
                     <em>$</em>&nbsp;
                     <b>
                         git clone
-                        https://github.com/your_username_/Project-Name.git
+                        https://github.com/mubaroqRifky/vue_fe_boilerplate.git
                     </b>
                 </Code>
 
@@ -61,7 +64,7 @@
                 <li>Setup your environment in .env file</li>
                 <i>
                     You can get API bolierplate from
-                    https://github.com/your_username_/Project-Name.git
+                    https://github.com/tebeiksan/laravel_api_boilerplate
                 </i>
                 <Code>
                     VITE_API_URL=[YOUR_API_URL]
@@ -128,15 +131,25 @@
 
             <h3 class="text-xl font-bold" id="license">License</h3>
             <p>
-                Distributed under the MIT License. See LICENSE.txt for more
-                information.
+                Distributed under the
+                <a href="https://opensource.org/license/MIT">MIT</a>
+                License. See LICENSE.txt for more information.
             </p>
-            <p>Copyright &copy; 2024, ICT. Mubaroq Rifki</p>
+            <p>Copyright &copy; 2024, ICT. Mubaroq Rifky</p>
 
             <hr class="border-gray my-6" />
 
             <h3 class="text-xl font-bold" id="contact">Contact</h3>
-            <p>Mubaroq Rifki - mubaroq.rifki92@gmail.com</p>
+            <p>
+                Mubaroq Rifky -
+                <a href="mailto:mubaroq.rifki92@gmail.com">
+                    mubaroq.rifki92@gmail.com
+                </a>
+            </p>
+            <p>
+                Tubagus Iksan -
+                <a href="mailto:tebeiksan@gmail.com"> tebeiksan@gmail.com </a>
+            </p>
 
             <h3 class="text-xl font-bold" id="acknowledgments">
                 Acknowledgments
@@ -163,25 +176,25 @@
             <h4 class="font-bold mb-4">On This Page</h4>
             <ul class="nav-panel">
                 <li>
-                    <a href="#getting-started"> Getting Started. </a>
+                    <a href="#getting-started"> Getting Started </a>
                 </li>
                 <li>
-                    <a href="#prerequisites"> Prerequisites. </a>
+                    <a href="#prerequisites"> Prerequisites </a>
                 </li>
                 <li>
-                    <a href="#installation"> Installation. </a>
+                    <a href="#installation"> Installation </a>
                 </li>
                 <li>
-                    <a href="#contributing"> Contributing. </a>
+                    <a href="#contributing"> Contributing </a>
                 </li>
                 <li>
-                    <a href="#license"> License. </a>
+                    <a href="#license"> License </a>
                 </li>
                 <li>
-                    <a href="#contact"> Contact. </a>
+                    <a href="#contact"> Contact </a>
                 </li>
                 <li>
-                    <a href="#acknowledgments"> Acknowledgments. </a>
+                    <a href="#acknowledgments"> Acknowledgments </a>
                 </li>
             </ul>
         </div>
@@ -224,6 +237,10 @@ h3 {
     @apply mt-10;
 }
 
+a {
+    @apply text-success;
+}
+
 h2,
 h3 {
     scroll-margin: 1rem;
@@ -231,5 +248,8 @@ h3 {
 
 .nav-panel {
     @apply grid gap-2 content-start text-darkGray;
+    a {
+        @apply text-darkGray;
+    }
 }
 </style>
