@@ -169,6 +169,7 @@ Copyright (c) 2024-present, Mubaroq Rifki
 ## Contact
 
 Mubaroq Rifki - mubaroq.rifki92@gmail.com
+
 Tubagus Iksan - tebeiksan@gmail.com
 
 <!-- ACKNOWLEDGMENTS -->
