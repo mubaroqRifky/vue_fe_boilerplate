@@ -1,17 +1,9 @@
 import AuthException from "@/exceptions/AuthException";
-import VueJwtDecode from "vue-jwt-decode";
-
-export function jwtDecode(token) {
-    try {
-        return VueJwtDecode.decode(token);
-    } catch (error) {
-        throw new AuthException(error);
-    }
-}
+import { jwtDecode } from "jwt-decode";
 
 export function jwtVerify(token) {
     try {
-        const decode = VueJwtDecode.decode(token);
+        const decode = jwtDecode(token);
         const exp_date = new Date(decode.exp * 1000);
         const current_date = new Date().getTime();
 
